@@ -1,3 +1,5 @@
-
-alert(navigator.platform)
-
+function bg() {
+	if (navigator.platform != "Win32") {
+		document.getElementById("wrapper").style.background = "black"
+	}
+}
