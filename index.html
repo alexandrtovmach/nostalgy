@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>projectD</title>
+<script>
+function delname(str) {
+	var k = 0;
+	var barr = str.split('')
+	while (k < str.length) {
+		if ((barr[k] == 's') && (barr[k + 1] == 'e') && (barr[k + 2] == 'r') && (barr[k + 3] == 'v')) {
+			break;
+		}
+		barr.shift()
+	};
+	str = barr.join('');
+	return str;
+};
+
+function ipsfn(ip) {
+	var arr = ip.split(' ');
+	var newarr = [];
+	var i = 0;
+	while (i < arr.length) {
+		newarr[i] = delname(arr[i])
+		++i;
+	}
+	return newarr;
+};
+
+function ipstypefn(iptyp) {
+	var arrs = iptyp.split(' ');
+	var barrs = [];
+	var j = 0;
+	while (j < arrs.length) {
+		barrs[j] = arrs[j].slice(0, 5);
+		++j;
+	}
+	return barrs;
+};
+
+function sortdiv(ipar) {
+	function koks(cose) {
+		var reson = cose.slice(4);
+		var idio = [];
+		for (var p = 0;; p++) {
+				if (!isNaN(parseFloat(reson[p]))&&isFinite(reson[p])) {
+					idio.push(reson[p]);
+				} else {
+					return idio.join('');
+				}
+		}
+		  
+	}
+	ipar.sort(function(a, b) {
+	return (koks(a) - koks(b))
+	})
+	return ipar;
+};
+
+function generalfn(ips, ipstype, allips) {
+	var iparr = ipsfn(ips);
+	var iptype = ipstypefn(ipstype);
+	var allipArray = ipsfn(allips);
+	var bounced = [];
+	for (var b = 0; b < iparr.length; b++) {
+			if (iparr.indexOf(allipArray[b]) == -1) {
+				bounced.push(allipArray[b])
+			}
+	};
+	var listBounced = sortdiv(bounced);
+	var t11ch = [];
+	var tNhFq = [];
+	var tdisp = [];
+	var tspam = [];
+	var t3c21w = [];
+	var topenr = [];
+	var tanother = [];
+	for (var m = 0; m < iptype.length; m++) {
+		if (iptype[m] == '3c21W') {
+			t3c21w.push(iparr[m] + '<br>')
+		} else if (iptype[m] == '11chD') {
+			t11ch.push(iparr[m] + '<br>')
+		} else if ((iptype[m] == '6YO/4') || (iptype[m] == 'quWoR') || (iptype[m] == 'v3e34')) {
+			tdisp.push(iparr[m] + '<br>')
+		} else if (iptype[m] == '/3z5f') {
+			tspam.push(iparr[m] + '<br>')
+		} else if (iptype[m] == 'NhFq/') {
+			tNhFq.push(iparr[m] + '<br>')
+		} else if (iptype[m] == 'MIWch') {
+			topenr.push(iparr[m] + '<br>')
+		}
+		else {
+			tanother.push(iparr[m] + '---' + iptype[m] + '<br>')
+		}
+	}
+	sortdiv(t3c21w);
+	sortdiv(t11ch);
+	sortdiv(tdisp);
+	sortdiv(tspam);
+	sortdiv(tNhFq);
+	sortdiv(topenr);
+	var finobj = {
+		a11ch: t11ch.join(''),
+		a3c21w: t3c21w.join(''),
+		spam: tspam.join(''),
+		disp: tdisp.join(''),
+		inbox: tNhFq.join(''),
+		opener: topenr.join(''),
+		bounced: listBounced.join('<br>')
+	}
+	return finobj;
+};
+
+
+function cheker(xen){
+	var cut = [];
+	for (var i = 9; i <= xen.length; i++) {
+		if (xen[i] == '-') {
+		} else {
+			cut[i] = xen[i];
+		}
+	}
+	return cut.join('');
+};
+function dois(strings) {
+	var arr = strings.split(' ');
+	arr.push('1','2');
+	var result = '<div style="cursor: pointer" onclick="copy(this)">';
+	function sortServ(arr) {
+		for (var i = 0; i <= arr.length; i++) {
+			var perem = arr[i].slice(4).substr(0,5);
+			var peremplus = (arr[i + 1])? arr[i + 1].slice(4).substr(0,5): false;
+			if ((perem != peremplus) && (peremplus != true)) {
+				result +=  cheker(arr[i]) + '<br>' + '</div><br>\n<div style="cursor: pointer" onclick="copy(this)">';
+			} else if (i == arr.length - 2) {
+				return result;
+			} else {
+				result += cheker(arr[i]) + '<br>';
+			}
+		} 
+	}
+	return sortServ(arr)
+};
+function someFunc(){
+var quantity = document.getElementById("quantity").value;
+var price = dois(quantity);
+var div = document.createElement("div");
+div.innerHTML = "<h3>Result<\/h3>\n <p>"+price+"</p>";
+document.getElementById("zayavka").appendChild(div);
+document.getElementById("quantity").value = '';
+return false;
+};
+function someFunc1(){
+var quantity0 = document.getElementById("quantity0").value;
+document.getElementById("quantity0").value = '';
+var quantity1 = document.getElementById("quantity1").value;
+document.getElementById("quantity1").value = '';
+var quantity2 = document.getElementById("quantity2").value;
+document.getElementById("quantity2").value = '';
+var flips = generalfn(quantity1, quantity2, quantity0);
+var div = document.createElement("div");
+div.innerHTML = "<h5>NHFQ<\/h5> <p>"+flips.inbox+"</p>";
+document.getElementById("nhfq").appendChild(div);
+var div = document.createElement("div");
+div.innerHTML = "<h5>Openers<\/h5> <p>"+flips.opener+"</p>";
+document.getElementById("nhfq").appendChild(div);
+var div = document.createElement("div");
+div.innerHTML = "<h5>spam(Normal)<\/h5> <p>"+flips.spam+"</p>";
+document.getElementById("spam").appendChild(div);
+var div = document.createElement("div");
+div.innerHTML = "<h5>disparu<\/h5> <p>"+flips.disp+"</p>";
+document.getElementById("spam").appendChild(div);
+var div = document.createElement("div");
+div.innerHTML = "<h5>11ch<\/h5> <p>"+flips.a11ch+"</p>";
+document.getElementById("q11ch").appendChild(div);
+var div = document.createElement("div");
+div.innerHTML = "<h5>3c21w<\/h5> <p>"+flips.a3c21w+"</p>";
+document.getElementById("q11ch").appendChild(div);
+var div = document.createElement("div");
+div.innerHTML = "<h5>bounced<\/h5> <p>"+flips.bounced+"</p>";
+document.getElementById("spam").appendChild(div);
+return false;
+
+};
+function copy(link) {
+	var selection = window.getSelection();
+	selection.selectAllChildren(link);
+	document.execCommand('copy');
+};
+function selectExample0(link) {
+	var example = link.nextElementSibling;
+	var selection = window.getSelection();
+	selection.selectAllChildren(example);
+	document.execCommand('copy');
+	var div = document.createElement("div");
+	div.innerHTML = '<img width="100%" src="http:\/\/modestspace.net\/5ae77175e476jrh0x4\/5ae8ce.png">';
+	document.getElementById("copy0").appendChild(div);
+};
+function selectExample1(link) {
+	var example = link.nextElementSibling;
+	var selection = window.getSelection();
+	selection.selectAllChildren(example);
+	document.execCommand('copy');
+	var div = document.createElement("div");
+	div.innerHTML = '<img width="100%" src="http:\/\/modestspace.net\/5ae77175e476jrh0x4\/5ae8ce.png">';
+	document.getElementById("copy1").appendChild(div);
+};
+function selectExample2(link) {
+	var example = link.nextElementSibling;
+	var selection = window.getSelection();
+	selection.selectAllChildren(example);
+	document.execCommand('copy');
+	var div = document.createElement("div");
+	div.innerHTML = '<img width="100%" src="http:\/\/modestspace.net\/5ae77175e476jrh0x4\/5ae8ce.png">';
+	document.getElementById("copy2").appendChild(div);
+};
+function selectExample3(link) {
+	var example = link.nextElementSibling;
+	var selection = window.getSelection();
+	selection.selectAllChildren(example);
+	document.execCommand('copy');
+	var div = document.createElement("div");
+	div.innerHTML = '<img width="100%" src="http:\/\/modestspace.net\/5ae77175e476jrh0x4\/5ae8ce.png">';
+	document.getElementById("copy3").appendChild(div);
+};
+</script>
+<style>
+.copy {
+	background-image: url("http://modestspace.net/ad66c875e476jp60x4/ad67f5.png");
+	background-size: cover;
+	width: 30px;
+	height: 35px;
+}
+.copy:hover  {
+	background-image: url("http://modestspace.net/ad66c875e476jp60x4/ad6bd6.png");
+	background-size: cover;
+}
+.copy:active  {
+	background-image: url("http://modestspace.net/ad66c875e476jp60x4/ad6e1c.png");
+	background-size: cover;
+}
+.copy:visited {
+	background-image: url("http://modestspace.net/5ae77175e476jrh0x4/5ae8ce.png");
+	background-size: cover;
+}
+h2 {
+-moz-user-select: none; 
+-khtml-user-select: none; 
+-webkit-user-select: none; 
+user-select: none;
+}
+</style>
+</head>
+<body>
+<div style="float: left; padding: 15px; text-align: center; width:35%; border-radius: 5px; border: 4px solid #FFDD00; background: #FFF3E1;">
+<h2>Form to divide IP's for send to seed.</h2>
+<form>
+	<center><table style="margin: 15px; background: #FFDD00; font-family: cursive;" id="zakazTable">
+		<tr> 
+			<td><span><label for="quantity">Input here IP's list:</label></span></td>
+			<td>
+				<input type="text" value="" id="quantity">
+				<input style="background: #FFA000; font-family: cursive;" type="button" value="Start" id="zakazat" onclick="someFunc()">
+			</td>
+		</tr>
+	</table>
+<div style="float:left;" class="copy" id="copy0" onclick="selectExample0(this)"></div>
+<div style="float:left; margin-left: 15px; padding-top: 10px; padding-left: 3px; text-align: left; width:80%; border-radius: 5px; border: 4px solid #FFDD00; background: #FFF;" id="zayavka"></div></center>
+</form>
+</div>
+
+<div style="float: left; margin-left:1%; padding: 15px; text-align: center; width:58%; border-radius: 5px; border: 4px solid #04CA35; background: #FFF3E1;">
+<center><h2>Form to divide IP's of type.</h2>
+<form>
+	<table style="margin: 15px; background: #04CA35; font-family: cursive;" id="zakazTable">
+		<tr> 
+			<td><span><label for="quantity0">Input here ALL IP's:</label></span></td>
+			<td>
+				<input type="text" value="" id="quantity0">
+			</td>
+			<td><span><label for="quantity1">Input here IP's list:</label></span></td>
+			<td>
+				<input type="text" value="" id="quantity1">
+			</td>
+			<td><span><label for="quantity2">Input here IP's TYPE list:</label></span></td>
+			<td>
+				<input type="text" value="" id="quantity2">
+				<input style="background: #04A035; font-family: cursive;" type="button" value="Start" id="zakazat" onclick="someFunc1()">
+			</td>	
+		</tr>
+	</table>
+
+
+<div style="float:left;" class="copy" id="copy1" onclick="selectExample1(this)"></div>
+
+<div style="float:left; margin-left: 1%; margin-right: 1%; margin-bottom: 15px; text-align:left; padding-top: 10px; padding-left: 3px; width:25%; border-radius: 5px; border: 4px solid #04CA35; background: #FFF;" id="nhfq"></div>
+
+<div style="float:left;" class="copy" id="copy2" onclick="selectExample2(this)"></div>
+
+<div style="float:left; margin-left: 1%; margin-right: 1%; margin-bottom: 15px; text-align:left; padding-top: 10px; padding-left: 3px; width:25%; border-radius: 5px; border: 4px solid #04CA35; background: #FFF;" id="spam"></div>
+
+<div style="float:left;" class="copy" id="copy3" onclick="selectExample3(this)"></div>
+
+<div style="float:left; margin-left: 1%; margin-right: 1%; margin-bottom: 15px; text-align:left; padding-top: 10px; padding-left: 3px; width:25%; border-radius: 5px; border: 4px solid #04CA35; background: #FFF;" id="q11ch"></div>
+
+</center>
+</form>
+</div>
+</body>
+</html>
