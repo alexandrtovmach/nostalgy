@@ -18,4 +18,21 @@ function timer() {
 	timert.rows[2].cells[3].innerHTML = Math.floor(lost/3600000)
 	timert.rows[2].cells[4].innerHTML = Math.floor(lost/60000)
 	timert.rows[2].cells[5].innerHTML = Math.floor(lost/1000)
+	
+	var timerd = document.getElementById("timerd");
+	timerd.style.display = "none";
+	timerd.rows[2].cells[0].innerHTML = (date.getFullYear()-start.getFullYear())
+	timerd.rows[2].cells[1].innerHTML = (date.getMonth()-start.getMonth())
+	timerd.rows[2].cells[2].innerHTML = Math.floor(lost/86400000)
+	timerd.rows[2].cells[3].innerHTML = Math.floor(lost/3600000)
+	timerd.rows[2].cells[4].innerHTML = Math.floor(lost/60000)
+	timerd.rows[2].cells[5].innerHTML = Math.floor(lost/1000)
+}
+
+
+function phase() {
+	var on = document.getElementById("checker");
+	on.classList.toggle("right");
+	timert.style.display = "none";
+	timerd.style.display = "block";
 }
