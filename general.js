@@ -4,8 +4,7 @@ var end = new Date(2018, 0);
 
 function bg() {
 	if (navigator.platform != "Win32") {
-		document.getElementById("wrapper").style.display = 'none';
-		document.body.style.background = 'url("bgmob.png")';
+		document.getElementById("wrapper").style.background = 'url("bgmob.png")';
 	}
 	setInterval(function () {timer()}, 1000)
 }
