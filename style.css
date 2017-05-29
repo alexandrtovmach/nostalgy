@@ -8,12 +8,8 @@ h6 {
 }
 #wrapper {
 	position: absolute;
-	background: url(https://media.giphy.com/media/Q9aBxHn9fTqKs/giphy.gif);
-	-webkit-filter: blur(10px) brightness(250%);
-	-moz-filter: blur(10px) brightness(250%);
-	-o-filter: blur(10px) brightness(250%);
-	-ms-filter: blur(10px) brightness(250%);
-	filter: blur(10px) brightness(250%);
+	background: url(bg.gif) no-repeat right bottom;
+	filter: blur(3px);
 	background-size: cover;
     width: 100%;
 	height: 100%;
