@@ -1,0 +1,50 @@
+#contain {
+	width: 80%;
+	min-width: 1000px;
+	margin: auto;
+	align: center;
+}
+
+.columns {
+	width: 24%;
+	background: white;
+	text-align: center;
+	font-weight: 700;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	float: left;
+	margin: 0.5%;
+	cursor: pointer;
+	color: black;
+}
+
+.columns:hover {
+	background: #F1F19B;
+	transition: 0.5s;
+	font-weight: 900;
+}
+
+
+.hidden {
+	display: none;
+}
+
+a {
+	target: _blank;
+	text-align: left;
+	text-decoration: none;
+}
+
+.columns a:hover {
+	target: _blank;
+	text-align: left;
+	text-decoration: underline;
+}
+
+.show {
+	display: block;
+	background: #F1F19B;
+	font-style: italic;
+	font-weight: 900;
+	font-size: 20px;
+}
