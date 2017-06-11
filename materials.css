@@ -1,21 +1,19 @@
 #contain {
-	width: 80%;
-	min-width: 1000px;
 	margin: auto;
-	align: center;
 }
 
 .columns {
-	width: 24%;
+	width: 300px;
 	background: white;
 	text-align: center;
 	font-weight: 700;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	float: left;
-	margin: 0.5%;
+	display: inline-table;
+	margin-top: 4px;
 	cursor: pointer;
 	color: black;
+	
 }
 
 .columns:hover {
@@ -47,4 +45,51 @@ a {
 	font-style: italic;
 	font-weight: 900;
 	font-size: 20px;
+}
+@media (max-width: 320px) {
+	#contain {
+		width: 320px;
+	}
+	.columns {
+		margin-left: 2.5px;
+	}
+}
+@media (max-width: 480px) and (orientation: portrait) {
+	#contain {
+		width: 320px;
+	}
+	.columns {
+		margin-left: 2.5px;
+	}
+}
+@media (max-width: 480px) and (orientation: landscape) {
+	#contain {
+		width: 460px;
+	}
+	.columns {
+		margin-left: 80px;
+	}
+}
+@media  (min-width: 768px) and (max-width: 991px) {
+	#contain {
+		width: 768px;
+	}
+	.columns {
+		margin-left: 234px;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	#contain {
+		width: 992px;
+	}
+	.columns {
+		margin-left: 346px;
+	}
+}
+@media (min-width: 1200px) {
+	#contain {
+		width: 1300px;
+		padding-left: 85px;
+	}
+	
 }
