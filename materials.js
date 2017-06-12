@@ -2,7 +2,6 @@ function init() {
 	var columns = document.getElementsByClassName('columns');
 	var containDeleg = document.getElementById('contain');
 	var active;
-	
 	for (var a = 0; a < document.getElementsByTagName('li').length; a++) {
 		var narrowRight = document.createElement('span');
 		narrowRight.innerHTML = '&#9654;';
@@ -26,15 +25,14 @@ function init() {
 	
 	if (navigator.platform != "Win32") {
 		containDeleg.onclick = function  (event) {
-			for (var i = 0; i < columns.length; i++) {
-				if (event.target == columns[i]) {
-					if (event.target == columns[c]) {
+			for (var c = 0; c < columns.length; c++) {
+				if (event.target == columns[c]) {
 					event.target.getElementsByTagName('ul')[0].classList.toggle('hidden');
 					event.target.getElementsByTagName('ul')[0].classList.toggle('show');
 					event.target.style.background = '#F1F19B';
 				} else {
-					for (var k = 0; k < columns[i].getElementsByTagName('ul')[0].getElementsByTagName('li').length; k++) {
-						if (event.target == columns[i].getElementsByTagName('ul')[0].getElementsByTagName('li')[k]) {
+					for (var k = 0; k < columns[c].getElementsByTagName('ul')[0].getElementsByTagName('li').length; k++) {
+						if (event.target == columns[c].getElementsByTagName('ul')[0].getElementsByTagName('li')[k]) {
 							if (event.target.hasAttribute('haveChilds')) {
 								event.target.getElementsByTagName('ul')[0].classList.toggle('hidden');
 								event.target.getElementsByTagName('ul')[0].classList.toggle('show');
@@ -43,6 +41,7 @@ function init() {
 						}
 					}
 				}
+				
 			}
 		}
 	} else { 
