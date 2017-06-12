@@ -1,42 +1,69 @@
 function init() {
 	var columns = document.getElementsByClassName('columns');
 	var containDeleg = document.getElementById('contain');
+	var active;
+	
+	for (var a = 0; a < document.getElementsByTagName('li').length; a++) {
+		var narrowRight = document.createElement('span');
+		narrowRight.innerHTML = '&#9654;';
+		var cash = document.getElementsByTagName('li')[a]
+		if (cash.hasAttribute('haveChilds')) {
+			console.log(cash)
+			cash.style.fontStyle = 'normal';
+			cash.prepend(narrowRight)
+		}
+	}
 	
 	containDeleg.onmousedown = function (event) {event.preventDefault()}
 	
-	containDeleg.onclick = function (event) {
-		if (event.target == columns[0]) {
-			columns[0].getElementsByTagName('ul')[0].classList.toggle('hidden');
-			columns[0].getElementsByTagName('ul')[0].classList.toggle('show');
-			columns[0].style.background = '#F1F19B';
-		} else if (event.target == columns[1]) {
-			columns[1].getElementsByTagName('ul')[0].classList.toggle('hidden');
-			columns[1].getElementsByTagName('ul')[0].classList.toggle('show');
-			columns[1].style.background = '#F1F19B';
-		} else if (event.target == columns[2]) {
-			columns[2].getElementsByTagName('ul')[0].classList.toggle('hidden');
-			columns[2].getElementsByTagName('ul')[0].classList.toggle('show');
-			columns[2].style.background = '#F1F19B';
-		} else if (event.target == columns[3]) {
-			columns[3].getElementsByTagName('ul')[0].classList.toggle('hidden');
-			columns[3].getElementsByTagName('ul')[0].classList.toggle('show');
-			columns[3].style.background = '#F1F19B';
-		} else if (event.target == columns[4]) {
-			columns[4].getElementsByTagName('ul')[0].classList.toggle('hidden');
-			columns[4].getElementsByTagName('ul')[0].classList.toggle('show');
-			columns[4].style.background = '#F1F19B';
-		} else if (event.target == columns[5]) {
-			columns[5].getElementsByTagName('ul')[0].classList.toggle('hidden');
-			columns[5].getElementsByTagName('ul')[0].classList.toggle('show');
-			columns[5].style.background = '#F1F19B';
-		} else if (event.target == columns[6]) {
-			columns[6].getElementsByTagName('ul')[0].classList.toggle('hidden');
-			columns[6].getElementsByTagName('ul')[0].classList.toggle('show');
-			columns[6].style.background = '#F1F19B';
-		} else if (event.target == columns[7]) {
-			columns[7].getElementsByTagName('ul')[0].classList.toggle('hidden');
-			columns[7].getElementsByTagName('ul')[0].classList.toggle('show');
-			columns[7].style.background = '#F1F19B';
+	if (navigator.platform != "Win32") {
+		containDeleg.onclick = function  (event) {
+			for (var c = 0; c < columns.length; c++) {
+				if (event.target == columns[c]) {
+					event.target.getElementsByTagName('ul')[0].classList.toggle('hidden');
+					event.target.getElementsByTagName('ul')[0].classList.toggle('show');
+					event.target.style.background = '#F1F19B';
+				}
+			}
+		}
+	} else { 
+		containDeleg.onclick = function (event) {
+			for (var i = 0; i < columns.length; i++) {
+				if (event.target == columns[i]) {
+					
+					
+					event.target.style.background = '#F1F19B';
+						
+					if (event.target != active) {
+						if (!active) {
+							event.target.getElementsByTagName('ul')[0].className = 'show';
+							event.target.className = 'columns showContain';
+							active = event.target;
+						} else {
+							event.target.getElementsByTagName('ul')[0].className = 'show';
+							event.target.className = 'columns showContain';
+							active.getElementsByTagName('ul')[0].className = 'hidden';
+							active.className = 'columns';
+							active = event.target;
+						}
+					} else {
+						active.getElementsByTagName('ul')[0].className = 'hidden';
+						active.className = 'columns';
+						active = '';
+					}
+				} else {
+					for (var k = 0; k < columns[i].getElementsByTagName('ul')[0].getElementsByTagName('li').length; k++) {
+						if (event.target == columns[i].getElementsByTagName('ul')[0].getElementsByTagName('li')[k]) {
+							if (event.target.hasAttribute('haveChilds')) {
+								event.target.getElementsByTagName('ul')[0].classList.toggle('hidden');
+								event.target.getElementsByTagName('ul')[0].classList.toggle('show');
+								event.target.getElementsByTagName('span')[0].style.color = (event.target.getElementsByTagName('ul')[0].classList.contains('hidden'))? 'black': '#0000EE';
+							}
+						}
+					}
+				}
+				
+			}
 		}
 	}
 }
