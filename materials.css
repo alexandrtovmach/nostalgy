@@ -47,9 +47,10 @@ li {
 	position: absolute;
 	left: 20%;
 	right: 20%;
-	top: 250px;
+	top: 350px;
 	bottom: 50px;
 	width: 60%;
+	min-height: 40px;
 }
 .show {
 	position: relative;
