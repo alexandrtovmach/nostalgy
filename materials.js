@@ -14,6 +14,14 @@ function init() {
 		}
 	}
 	
+	document.body.onclick = function (event) {
+		if (event.target == document.getElementById('wrapper'))  {
+			active.getElementsByTagName('ul')[0].className = 'hidden';
+			active.className = 'columns';
+			active = '';
+		}
+	}
+	
 	containDeleg.onmousedown = function (event) {event.preventDefault()}
 	
 	if (navigator.platform != "Win32") {
