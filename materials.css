@@ -29,23 +29,34 @@
 
 a {
 	target: _blank;
-	text-align: left;
 	text-decoration: none;
 }
-
+ul {
+	text-align: left;
+}
+li {
+	list-style-type: none;
+}
 .columns a:hover {
 	target: _blank;
 	text-align: left;
 	text-decoration: underline;
 }
-
+.showContain {
+	display: block;
+	position: absolute;
+	left: 20%;
+	right: 20%;
+	top: 250px;
+	bottom: 50px;
+	width: 60%;
+}
 .show {
+	position: relative;
 	display: block;
 	background: #F1F19B;
-	font-style: italic;
-	font-weight: 900;
-	font-size: 20px;
 }
+
 @media (max-width: 320px) {
 	#contain {
 		width: 320px;
