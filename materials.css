@@ -64,11 +64,11 @@ li {
 	}
 	.columns {
 		margin: auto;
+		margin-top: 4px;
 		min-width: 300px;
 		width: 80%;
 	}
 	body {
-		background-color: black;
 		height: 360px;
 	}
 }
@@ -78,11 +78,11 @@ li {
 	}
 	.columns {
 		margin: auto;
+		margin-top: 4px;
 		min-width: 300px;
 		width: 80%;
 	}
 	body {
-		background-color: black;
 		height: 360px;
 	}
 }
@@ -92,11 +92,11 @@ li {
 	}
 	.columns {
 		margin: auto;	
+		margin-top: 4px;
 		min-width: 300px;
 		width: 80%;
 	}
 	body {
-		background-color: black;
 		height: 360px;
 	}
 }
@@ -106,12 +106,12 @@ li {
 	}
 	.columns {
 		margin: auto;
+		margin-top: 4px;
 		min-width: 300px;
 		width: 80%;
 	}
 	body {
-		background-color: black;
-		height: 700px;
+		height: 360px;
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -120,6 +120,7 @@ li {
 	}
 	.columns {
 		margin: auto;
+		margin-top: 4px;
 		min-width: 300px;
 		width: 80%;
 	}
