@@ -64,6 +64,8 @@ li {
 	}
 	.columns {
 		margin-left: 2.5px;
+		min-width: 300px;
+		width: 80%;
 	}
 }
 @media (max-width: 480px) and (orientation: portrait) {
@@ -72,6 +74,8 @@ li {
 	}
 	.columns {
 		margin-left: 2.5px;
+		min-width: 300px;
+		width: 80%;
 	}
 }
 @media (max-width: 480px) and (orientation: landscape) {
@@ -79,7 +83,9 @@ li {
 		width: 460px;
 	}
 	.columns {
-		margin-left: 80px;
+		margin-left: 80px;		
+		min-width: 300px;
+		width: 80%;
 	}
 }
 @media  (min-width: 768px) and (max-width: 991px) {
@@ -88,6 +94,8 @@ li {
 	}
 	.columns {
 		margin-left: 234px;
+		min-width: 300px;
+		width: 80%;
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -96,6 +104,8 @@ li {
 	}
 	.columns {
 		margin-left: 346px;
+		min-width: 300px;
+		width: 80%;
 	}
 }
 @media (min-width: 1200px) {
