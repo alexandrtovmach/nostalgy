@@ -63,9 +63,13 @@ li {
 		width: 320px;
 	}
 	.columns {
-		margin-left: 2.5px;
+		margin: auto;
 		min-width: 300px;
 		width: 80%;
+	}
+	body {
+		background-color: black;
+		height: 360px;
 	}
 }
 @media (max-width: 480px) and (orientation: portrait) {
@@ -73,9 +77,13 @@ li {
 		width: 320px;
 	}
 	.columns {
-		margin-left: 2.5px;
+		margin: auto;
 		min-width: 300px;
 		width: 80%;
+	}
+	body {
+		background-color: black;
+		height: 360px;
 	}
 }
 @media (max-width: 480px) and (orientation: landscape) {
@@ -83,9 +91,13 @@ li {
 		width: 460px;
 	}
 	.columns {
-		margin-left: 80px;		
+		margin: auto;	
 		min-width: 300px;
 		width: 80%;
+	}
+	body {
+		background-color: black;
+		height: 360px;
 	}
 }
 @media  (min-width: 768px) and (max-width: 991px) {
@@ -93,9 +105,13 @@ li {
 		width: 768px;
 	}
 	.columns {
-		margin-left: 234px;
+		margin: auto;
 		min-width: 300px;
 		width: 80%;
+	}
+	body {
+		background-color: black;
+		height: 700px;
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -103,7 +119,7 @@ li {
 		width: 992px;
 	}
 	.columns {
-		margin-left: 346px;
+		margin: auto;
 		min-width: 300px;
 		width: 80%;
 	}
