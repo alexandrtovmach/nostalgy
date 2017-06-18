@@ -1,1 +1,1 @@
-This is my hosting
+projectA v2.0
