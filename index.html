@@ -1,12 +1,59 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8">
 		<title>projectA v2.0</title>
-		<link rel="stylesheet" href="style.css">
-		<script src="general.js"></script>
+		<!--[if lt IE 9]> 
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+		<![endif]-->
+		<link rel="stylesheet" href="css\style.css">
+		<script src="js\general.js"></script>
 	</head>
 	<body>
-	
+		<header>
+			<div class="h-bgimage"></div>
+			<a href="index.html"><figure class="h-logo">
+				<img src="img\logo.png">
+				<figcaption>WE CREATE YOUR DREAMWORLD</figcaption>
+			</figure>
+			</a>
+			<nav>
+				<ul class="h-nav">
+					<a href="index.html" title="Home page"><li>HOME</li></a>
+					<a href="portfolio.html" title="Examples of my work"><li>PORTFOLIO</li></a>
+					<a href="about.html" title="My biography and achievements"><li>ABOUT ME</li></a>
+					<a href="contacts.html" title="Contact info"><li>CONTACTS</li></a>
+				</ul>
+			</nav>
+		</header>
+		<div class="content">
+			<article></article>
+			<aside>
+				<h2>My projectA</h2>
+				<ul>
+					<li><div class="bar">Learning</div>
+						<ul id="c-learnlist">
+							<li><div class="bar">HTML</div></li>
+							<li><div class="bar">CSS</div></li>
+							<li><div class="bar">JS</div></li>
+							<li><div class="bar">FrameworksJS</div></li>
+							<li><div class="bar">NodeJS</div></li>
+						</ul>
+					</li>
+					<li><div class="bar">Idea</div></li>
+					<li><div class="bar">Developing</div></li>
+					<li><div class="bar">QA Testing</div></li>
+					<li><div class="bar">Relize</div></li>
+					<li><div class="bar">Commerce content</div></li>
+					<li><div class="bar">Passive pay</div></li>
+				</ul>
+				<div id="timer">
+					<div id="time"><span>00</span>-<span>00</span>-<span>00</span> <span>00</span>:<span>00</span>:<span>00</span></div>
+					<span>losted time</span>
+				</div>
+			</aside>
+			
+		</div>
+		<footer></footer>
 	</body>
 </html>

@@ -1,0 +1,166 @@
+/*global*/
+/*https://colorscheme.ru/#3k12ay-UhBZU0*/
+header, figure, figcaption, aside, article, nav, footer {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #CBF8FD;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/*header*/
+header {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background: linear-gradient(to top, #CBF8FD, #03D6EA);
+	overflow: hidden;
+}
+/*h-logo*/
+.h-bgimage {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-image: url('http://st.depositphotos.com/3018991/3783/i/950/depositphotos_37833545-stock-photo-frozen-drops-of-water-on.jpg');
+	background-repeat: repeat-x;
+	opacity: 0.2;
+}
+.h-logo {
+	position: absolute;
+	left: 30%;
+	bottom: 0%;
+	width: 10%;
+	max-width: 150px;
+	max-height: 180px;
+	min-width: 130px;
+	min-height: 100px;
+	text-align: center;
+	transition: 0.4s;
+	color: rgba(256, 256, 256, 0);
+	font-style: italic;
+	font-weight: 800;
+	font-family: Arial sans-serif;
+	font-size: 70%;
+}
+.h-logo:hover {		
+	background-color: rgba(256, 256, 256, 0.2);
+	box-shadow: 0 0 10px 0 #CBF8FD,
+		10px 8px 2px 0 #3399A3;
+	color: white;
+	text-shadow: 0 0 10px #3399A3;
+	left: 29.5%;
+	bottom: 10px;
+}
+.h-logo img {
+	width: 100%;
+	height: 100%;
+}
+/*h-navigation*/
+.h-nav {
+	position: absolute;
+	right: 30%;
+	top: 75px;
+	bottom: 75px;
+	list-style-type: none;
+}
+.h-nav li {
+	display: flex;
+	float: left;
+	width: 100px;
+	height: 50px;
+	transition: 0.2s;
+	background-color: rgba(256, 256, 256, 0.3);
+	justify-content: center;
+	align-items: center;
+	color: #0C727C;
+	font-style: italic;
+	font-weight: 500;
+	font-family: Arial sans-serif;
+	
+}
+.h-nav li:hover {
+	position: relative;
+	background-color: rgba(256, 256, 256, 0.6);
+	box-shadow: 0 0 10px 0 #CBF8FD,
+		10px 8px 2px 0 #3399A3;
+	color: white;
+	font-weight: 800;
+	text-shadow: 0 0 10px #3399A3;
+}
+
+/*content*/
+.content {
+	position: relative;
+	width: 40%;
+	min-width: 700px;
+	min-height: 2000px;
+	background-color: white;
+	margin: auto;
+}
+.content aside {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30%;
+	height: 500px;
+	background-color: rgba(203, 248, 253, 0.3);
+	box-shadow: 4px 3px 2px 0 #3399A3;
+	transition: 0.2s;
+	text-align: center;
+}
+.content aside:hover {
+	top: 18px;
+	right: 22px;
+	box-shadow: 10px 8px 2px 0 #3399A3;
+}
+.content aside ul {	
+	width: 90%;
+	list-style-type: none;
+	margin: auto;
+}
+.content aside li {
+	transition: 0.2s;
+	background-color: rgba(256, 256, 256, 0.3);
+	color: #0C727C;	
+	font-weight: 500;
+	font-family: Arial sans-serif;
+	cursor: default;
+}
+#c-learnlist li {
+	width: 100%;
+	font-size: 80%;
+	font-style: italic;
+}
+
+.content aside li:hover {
+	color: white;
+}
+/*timer*/
+#timer {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+#time {
+	width: 80%;
+	border-bottom: 3px solid #3399A3;	
+	margin: auto;
+}
+
+
+/*footer*/
+footer {
+	width: 100%;
+	height: 200px;
+	background-color: #3399A3;
+}	
