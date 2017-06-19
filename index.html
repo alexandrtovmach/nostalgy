@@ -7,9 +7,10 @@
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
 		<![endif]-->
 		<link rel="stylesheet" href="css\style.css">
+		<script src="js\timer.js"></script>
 		<script src="js\general.js"></script>
 	</head>
-	<body>
+	<body onload="init()">
 		<header>
 			<div class="h-bgimage"></div>
 			<a href="index.html"><figure class="h-logo">
@@ -27,17 +28,17 @@
 			</nav>
 		</header>
 		<div class="content">
-			<article></article>
+			
 			<aside>
 				<h2>My projectA</h2>
 				<ul>
 					<li><div class="bar">Learning</div>
-						<ul id="c-learnlist">
-							<li><div class="bar">HTML</div></li>
-							<li><div class="bar">CSS</div></li>
-							<li><div class="bar">JS</div></li>
-							<li><div class="bar">FrameworksJS</div></li>
-							<li><div class="bar">NodeJS</div></li>
+						<ul>
+							<li><div class="c-learnlist">HTML</div></li>
+							<li><div class="c-learnlist">CSS</div></li>
+							<li><div class="c-learnlist">JS</div></li>
+							<li><div class="c-learnlist">FrameworksJS</div></li>
+							<li><div class="c-learnlist">NodeJS</div></li>
 						</ul>
 					</li>
 					<li><div class="bar">Idea</div></li>
@@ -48,11 +49,14 @@
 					<li><div class="bar">Passive pay</div></li>
 				</ul>
 				<div id="timer">
-					<div id="time"><span>00</span>-<span>00</span>-<span>00</span> <span>00</span>:<span>00</span>:<span>00</span></div>
+					<div id="time"><span>Choose category</span><br><input id="range" type="range"></div>
 					<span>losted time</span>
 				</div>
+				
 			</aside>
-			
+			<article><p>This site is for personal and public use. He is a motivator for the creator and at the same time shows the level of skill for the employer.</p>
+			<p>This site is for personal and public use. He is a motivator for the creator and at the same time shows the level of skill for the employer.</p>
+			<p>This site is for personal and public use. He is a motivator for the creator and at the same time shows the level of skill for the employer.</p></article>
 		</div>
 		<footer></footer>
 	</body>

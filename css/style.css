@@ -106,6 +106,7 @@ header {
 	background-color: white;
 	margin: auto;
 }
+/*aside panel*/
 .content aside {
 	position: absolute;
 	top: 20px;
@@ -135,12 +136,11 @@ header {
 	font-family: Arial sans-serif;
 	cursor: default;
 }
-#c-learnlist li {
+.c-learnlist {
 	width: 100%;
 	font-size: 80%;
 	font-style: italic;
 }
-
 .content aside li:hover {
 	color: white;
 }
@@ -150,11 +150,33 @@ header {
 	bottom: 20px;
 	width: 100%;
 	text-align: center;
+	color: #0C727C;	
+	font-family: Arial sans-serif;
+	cursor: default;
 }
 #time {
 	width: 80%;
-	border-bottom: 3px solid #3399A3;	
 	margin: auto;
+	font-weight: 600;
+	font-size: 150%;
+}
+#range {
+	width: 100%;
+}
+/*main content*/
+.content article {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 60%;
+	height: 500px;
+	transition: 0.2s;
+	color: #0C727C;	
+	text-indent: 15px;
+	font-weight: 200;
+	font-family: Arial sans-serif;
+	font-size: 150%;
+	cursor: default;
 }
 
 
