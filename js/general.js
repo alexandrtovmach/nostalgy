@@ -1,5 +1,6 @@
 function init() {
-	initBgImg()
-	range.addEventListener('mousedown', checkRange)
-	range.addEventListener('mouseup', startTimer)
+	initBgImg();	
+	bars();
+	range.addEventListener('mousedown', checkRange);
+	range.addEventListener('mouseup', startTimer);
 }

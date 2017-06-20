@@ -144,6 +144,7 @@ header {
 	width: 100%;
 	font-size: 80%;
 	font-style: italic;
+	text-align: left;
 }
 .content aside li:hover {
 	color: white;
@@ -170,10 +171,16 @@ header {
 	border: 2px solid rgba(203, 248, 253, 1);	
 	font-size: 10px;
 	text-align: center;
+	
 }
-#lost {
+#lostTime {
+	width: 50%;
 	height: 100%;
 	float: left;
+}
+#leftTime {
+	width: auto;
+	height: 100%;
 }
 #range {
 	width: 100%;
