@@ -54,10 +54,17 @@ function timerIndicator() {
 function bars() {
 	var barArr = document.getElementsByClassName('bar');
 	var learnArr = document.getElementsByClassName('c-learnlist');
-	var arrOfResult = [0.8, 0.5, 1, 0.001, 0.1]
-	for (var i = 0; i < learnArr.length; i++) {
-		percentToBar(learnArr[i], arrOfResult[i])
+	var arrOfResultLearn = [0.8, 0.5, 1, 0.001, 0.1];
+	var totalLearn = 0;
+	for (var i = 0; i < learnArr.length; i++) {		
+		totalLearn += arrOfResultLearn[i];
+		percentToBar(learnArr[i], arrOfResultLearn[i]);
 	}
+	var arrOfGlobRes = [(totalLearn/arrOfResultLearn.length), 1, 0.2, 0.001, 0.001, 0.001, 0.001];
+	for (var i = 0; i < barArr.length; i++) {
+		percentToBar(barArr[i], arrOfGlobRes[i])
+	}
+	
 }
 function percentToBar(elem, perc) {
 	elem.style.backgroundColor = 'rgb(' + Math.floor(315-(255*perc)) + ', ' + Math.floor(325-(255*(1-perc))) + ', 0)';
