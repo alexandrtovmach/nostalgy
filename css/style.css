@@ -5,12 +5,13 @@ header, figure, figcaption, aside, article, nav, footer {
 	margin: 0;
 	padding: 0;
 }
-ul {
+ul, input {
 	margin: 0;
 	padding: 0;
 }
 body {
 	background-color: #CBF8FD;
+	height: 2400px;
 }
 a {
 	text-decoration: none;
@@ -22,8 +23,10 @@ header {
 	position: relative;
 	width: 100%;
 	height: 200px;
-	background: linear-gradient(to top, #CBF8FD, #03D6EA);
+	background: linear-gradient(to top, rgba(203, 248, 254, 0.2), rgba(3, 203, 214, 0.2));
 	overflow: hidden;
+	box-shadow: 2px 2px 5px 0 #3399A3;
+	margin-bottom: 15px;
 }
 /*h-logo*/
 .h-bgimage {
@@ -103,8 +106,9 @@ header {
 	width: 40%;
 	min-width: 700px;
 	min-height: 2000px;
-	background-color: white;
+	background-color: rgba(255,255,255,0.8);
 	margin: auto;
+	box-shadow: 2px 2px 5px 0 #3399A3;
 }
 /*aside panel*/
 .content aside {
@@ -159,6 +163,17 @@ header {
 	margin: auto;
 	font-weight: 600;
 	font-size: 150%;
+}
+#fieldInd {
+	width: 100%;
+	height: 10px;
+	border: 2px solid rgba(203, 248, 253, 1);	
+	font-size: 10px;
+	text-align: center;
+}
+#lost {
+	height: 100%;
+	float: left;
 }
 #range {
 	width: 100%;

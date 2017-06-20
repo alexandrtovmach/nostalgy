@@ -1,0 +1,13 @@
+#wall {
+	position: relative;
+	z-index: -1;
+}
+#wall img {
+	opacity: 0;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	transition-duration: 5s;
+	transition-direction: easy-in-out;
+	transition-property: opacity;
+}

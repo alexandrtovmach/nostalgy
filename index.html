@@ -7,7 +7,9 @@
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
 		<![endif]-->
 		<link rel="stylesheet" href="css\style.css">
+		<link rel="stylesheet" href="css\bg.css">
 		<script src="js\timer.js"></script>
+		<script src="js\bg.js"></script>
 		<script src="js\general.js"></script>
 	</head>
 	<body onload="init()">
@@ -27,36 +29,53 @@
 				</ul>
 			</nav>
 		</header>
-		<div class="content">
-			
-			<aside>
-				<h2>My projectA</h2>
-				<ul>
-					<li><div class="bar">Learning</div>
-						<ul>
-							<li><div class="c-learnlist">HTML</div></li>
-							<li><div class="c-learnlist">CSS</div></li>
-							<li><div class="c-learnlist">JS</div></li>
-							<li><div class="c-learnlist">FrameworksJS</div></li>
-							<li><div class="c-learnlist">NodeJS</div></li>
-						</ul>
-					</li>
-					<li><div class="bar">Idea</div></li>
-					<li><div class="bar">Developing</div></li>
-					<li><div class="bar">QA Testing</div></li>
-					<li><div class="bar">Relize</div></li>
-					<li><div class="bar">Commerce content</div></li>
-					<li><div class="bar">Passive pay</div></li>
-				</ul>
-				<div id="timer">
-					<div id="time"><span>Choose category</span><br><input id="range" type="range"></div>
-					<span>losted time</span>
-				</div>
-				
-			</aside>
-			<article><p>This site is for personal and public use. He is a motivator for the creator and at the same time shows the level of skill for the employer.</p>
-			<p>This site is for personal and public use. He is a motivator for the creator and at the same time shows the level of skill for the employer.</p>
-			<p>This site is for personal and public use. He is a motivator for the creator and at the same time shows the level of skill for the employer.</p></article>
+		<div class="main">
+			<div id="wall">
+				<img src="img\bg\html.png">
+				<img src="img\bg\css.png">
+				<img src="img\bg\js.png">
+				<img src="img\bg\github.png">
+				<img src="img\bg\angularjs.png">
+				<img src="img\bg\pointjs.png">
+				<img src="img\bg\nodejs.png">
+				<img src="img\bg\photoshop.png">
+			</div>
+			<div class="content">
+				<aside>
+					<h2>My projectA</h2>
+					<ul>
+						<li><div class="bar">Learning</div>
+							<ul>
+								<li><div class="c-learnlist">HTML</div></li>
+								<li><div class="c-learnlist">CSS</div></li>
+								<li><div class="c-learnlist">JS</div></li>
+								<li><div class="c-learnlist">FrameworksJS</div></li>
+								<li><div class="c-learnlist">NodeJS</div></li>
+							</ul>
+						</li>
+						<li><div class="bar">Idea</div></li>
+						<li><div class="bar">Developing</div></li>
+						<li><div class="bar">QA Testing</div></li>
+						<li><div class="bar">Relize</div></li>
+						<li><div class="bar">Commerce content</div></li>
+						<li><div class="bar">Passive pay</div></li>
+					</ul>
+					<div id="timer">
+						<div id="time">
+							<div>Choose category</div>
+							<div id="fieldInd">
+								<div id="lost">spent</div>
+								<div id="have">remain</div>
+							</div>
+							<input id="range" type="range">
+						</div>
+					</div>
+					
+				</aside>
+				<article><p>This site is for personal and public use. He is a motivator for the creator and at the same time shows the level of skill for the employer.</p>
+				<p>This site is for personal and public use. He is a motivator for the creator and at the same time shows the level of skill for the employer.</p>
+				<p>This site is for personal and public use. He is a motivator for the creator and at the same time shows the level of skill for the employer.</p></article>
+			</div>
 		</div>
 		<footer></footer>
 	</body>
