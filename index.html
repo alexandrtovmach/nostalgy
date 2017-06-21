@@ -51,11 +51,11 @@
 				<a href="https://www.freecodecamp.com/"><img src="img\bg\freecodecamp.png"></a>
 			</div>
 			<div class="content">
-				<aside>
+				<aside id="myproj" class="smallMyProj">
 					<h2>My projectA</h2>
 					<ul>
 						<li><div class="bar">Learning</div>
-							<ul>
+							<ul class="hidden">
 								<li><div class="c-learnlist">HTML</div></li>
 								<li><div class="c-learnlist">CSS</div></li>
 								<li><div class="c-learnlist">JS</div></li>
@@ -63,19 +63,42 @@
 								<li><div class="c-learnlist">NodeJS</div></li>
 							</ul>
 						</li>
-						<li><div class="bar">Idea</div></li>
-						<li><div class="bar">Developing</div></li>
-						<li><div class="bar">QA Testing</div></li>
-						<li><div class="bar">Relize</div></li>
-						<li><div class="bar">Commerce content</div></li>
-						<li><div class="bar">Passive pay</div></li>
+						<li><div class="bar">Idea</div>
+							<ul class="hidden">
+								<li>Изучение английского языка по песням</li>
+								<li>Тренажер слов</li>
+								<li>Точный расчет дозировок мед. препаратов</li>
+								<li>Платформа для тестов</li>
+								<li>Платформа обучение/работа</li>
+								<li>Восстановитель</li>
+								<li>Разрушитель сайтов</li>
+								<li>Игра "Интуиция"</li>
+								<li>Жаргонный переводчик сайтов</li>
+								<li>Редактор-адаптер в кроссбраузерную верстку</li>
+							</ul>
+						</li>
+						<li><div class="bar">Developing</div>
+							<p class="hidden">Непосредственное создание/написание кода</p>
+						</li>
+						<li><div class="bar">QA Testing</div>
+							<p class="hidden">Тестирование кода/приложения/сайта</p>
+						</li>
+						<li><div class="bar">Relize</div>
+							<p class="hidden">Релиз приложения/сайта</p>
+						</li>
+						<li><div class="bar">Commerce content</div>
+							<p class="hidden">Размещение в приложении рекламы/коммерческих материалов</p>
+						</li>
+						<li><div class="bar">Passive pay</div>
+							<p class="hidden">Получение пассивного дохода с размещенной рекламы</p>
+						</li>
 					</ul>
 					<div id="timer">
 						<div id="time">
 							<div>Choose category</div>
 							<div id="fieldInd" hidden>
-								<div id="lostTime">lost time</div>
-								<div id="leftTime">left time</div>
+								<span id="lostTime">lost time</span>
+								<span id="leftTime">left time</span>
 							</div>
 							<input id="range" type="range">
 						</div>

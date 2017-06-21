@@ -18,7 +18,6 @@ function animation(i) {
 	var vrtcl = rand(window.pageYOffset, ((window.pageYOffset + (window.screen.height-300)) - 200  - 50))
 	a.style.top = vrtcl + 'px';
 	var side = (vrtcl % 2 == 0)? 'left': 'right';
-	console.log(vrtcl)
 	var hrznt = rand(50, (document.body.clientWidth/2 - 250 - 200 - 50))
 	a.style[side] = hrznt + 'px';
 	setTimeout(function() {

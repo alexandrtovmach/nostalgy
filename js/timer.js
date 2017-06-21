@@ -29,12 +29,13 @@ function numberTimer() {
 		res = 1000;
 	}
 }
-function startTimer() {
+function startTimer(event) {
+	event.cancelBubble=true
 	clearInterval(checkInt)
 	fieldInd.removeAttribute('hidden');
 	refresh()
 	contentInt = setInterval(refresh, res)
-	timerIndicator()
+	timerIndicator();
 }
 function refresh() {
 	var date = new Date();
@@ -46,27 +47,34 @@ function refresh() {
 //visual
 function timerIndicator() {	
 	var percent = lost/(end - start);
-	percentToBar(lostTime, percent);
-	//exclude leftTime elem - change style without function percentToBar()
-	leftTime.style.backgroundColor = 'rgb(' + Math.floor(315-(255*(1-percent))) + ', ' + Math.floor(325-(255*(percent))) + ', 0)';
+	percentToBar(fieldInd, percent)
 	
 }
 function bars() {
 	var barArr = document.getElementsByClassName('bar');
 	var learnArr = document.getElementsByClassName('c-learnlist');
-	var arrOfResultLearn = [0.8, 0.5, 1, 0.001, 0.1];
-	var totalLearn = 0;
-	for (var i = 0; i < learnArr.length; i++) {		
-		totalLearn += arrOfResultLearn[i];
-		percentToBar(learnArr[i], arrOfResultLearn[i]);
+	var arrOfResultLearn = [0.8, 0.5, 1, 0.2, 0.1];
+	document.getElementsByClassName('bar')[0].onmouseup = function (event) {
+		event.cancelBubble=true;
+		event.target.nextElementSibling.classList.toggle('hidden');
+		for (var i = 0; i < learnArr.length; i++) {
+			percentToBar(learnArr[i], arrOfResultLearn[i]);
+		}
 	}
-	var arrOfGlobRes = [(totalLearn/arrOfResultLearn.length), 1, 0.2, 0.001, 0.001, 0.001, 0.001];
+	var cach = arrOfResultLearn.reduce(function(sum, current) {return sum + current;}, 0)
+	var arrOfGlobRes = [(cach/arrOfResultLearn.length), 1, 0.2, 0.001, 0.28451, 0.001, 0.001];
 	for (var i = 0; i < barArr.length; i++) {
 		percentToBar(barArr[i], arrOfGlobRes[i])
 	}
-	
 }
+
+
+//' + perc*100 + '%
+//' + ((perc*100)+3) + '%
 function percentToBar(elem, perc) {
-	elem.style.backgroundColor = 'rgb(' + Math.floor(315-(255*perc)) + ', ' + Math.floor(325-(255*(1-perc))) + ', 0)';
-	elem.style.width = perc*100 + '%';
+	elem.style.background = 'linear-gradient(to right, rgba( 0, ' + Math.floor(305-(255*(1-perc))) + ', ' + Math.floor(315-(255*(1-perc))) + ', 0.4), white 95%)';
+	perc = (perc < 0.01)? 0.01: perc;
+	perc = (perc > 0.91)? 0.91: perc;
+	elem.style.backgroundPosition = elem.clientWidth*perc + 'px 0px';
+	
 }

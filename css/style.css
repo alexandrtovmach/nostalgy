@@ -17,6 +17,9 @@ a {
 	text-decoration: none;
 	color: black;
 }
+.hidden {
+	display: none; 
+}
 
 /*header*/
 header {
@@ -111,7 +114,8 @@ header {
 	box-shadow: 2px 2px 5px 0 #3399A3;
 }
 /*aside panel*/
-.content aside {
+/*small side banner style*/
+.smallMyProj {
 	position: absolute;
 	top: 20px;
 	right: 20px;
@@ -119,68 +123,124 @@ header {
 	height: 500px;
 	background-color: rgba(203, 248, 253, 0.3);
 	box-shadow: 4px 3px 2px 0 #3399A3;
-	transition: 0.2s;
-	text-align: center;
+	transition: 0.5s;
+	text-indent: 15px;
+	animation-name: rotate;
+	animation-duration: 2s;
+	animation-direction: normal;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
 }
-.content aside:hover {
-	top: 18px;
+.smallMyProj:hover {
+	/*top: 18px;
 	right: 22px;
 	box-shadow: 10px 8px 2px 0 #3399A3;
+	background-color: rgba(203, 248, 253, 0.5);
+	transform-origin: 10% 10%;*/
+	
 }
-.content aside ul {	
+@keyframes rotate{
+	from {transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+	to {transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);}
+}
+.smallMyProj ul {	
 	width: 90%;
 	list-style-type: none;
 	margin: auto;
 }
-.content aside li {
-	transition: 0.2s;
+.smallMyProj li {
 	background-color: rgba(256, 256, 256, 0.3);
 	color: #0C727C;	
 	font-weight: 500;
 	font-family: Arial sans-serif;
 	cursor: default;
+	margin: 5px 0;
+	border: 2px solid #3399A3;
+	overflow: hidden;
+}
+/*big side banner style*/
+.bigMyProj {
+	position: absolute;
+	z-index: 1;
+	top: -150px;
+	left: -100px;
+	right: -100px;
+	width: auto;
+	height: auto;
+	min-height: 700px;
+	background-color: rgba(203, 248, 253, 1);
+	box-shadow: 4px 3px 200px 0 #3399A3;
+	transition: 1s;
+	text-indent: 15px;
+}
+.bigMyProj ul {	
+	width: 90%;
+	list-style-type: none;
+	margin: auto;
+}
+.bigMyProj li {
+	background-color: rgba(256, 256, 256, 0.3);
+	color: #0C727C;	
+	font-weight: 500;
+	font-family: Arial sans-serif;
+	cursor: default;
+	margin: 5px 0;
+	border: 2px solid #3399A3;
+	overflow: hidden;
 }
 .c-learnlist {
-	width: 100%;
+	width: 110%;
 	font-size: 80%;
 	font-style: italic;
-	text-align: left;
+	background-position: 0 0;
+	transition-direction: easy-in-out;
+	transition-duration: 1s;
 }
 .content aside li:hover {
-	color: white;
+	box-shadow: 0 0 5px 0 #3399A3;
+	transition: 0.2s;
+}
+.bar {
+	width: 110%;
+	background-position: 0 0;
+	transition-direction: easy-in-out;
+	transition-duration: 1s;
+
 }
 /*timer*/
 #timer {
-	position: absolute;
-	bottom: 20px;
+	margin: auto;
 	width: 100%;
 	text-align: center;
-	color: #0C727C;	
+	color: #0C727C;
 	font-family: Arial sans-serif;
 	cursor: default;
+	text-indent: 0;
 }
 #time {
 	width: 80%;
 	margin: auto;
 	font-weight: 600;
-	font-size: 150%;
+	font-size: 140%;
 }
 #fieldInd {
 	width: 100%;
-	height: 10px;
+	height: 16px;
 	border: 2px solid rgba(203, 248, 253, 1);	
-	font-size: 10px;
+	font-size: 16px;
 	text-align: center;
-	
+	font-family: Arial sans-serif;
+	cursor: default;
+	border: 2px solid #3399A3;
+	background: linear-gradient(to right black, transparent 50%);
+	background-position: -100px;
+	transition-duration: 5s;
 }
 #lostTime {
-	width: 50%;
-	height: 100%;
 	float: left;
 }
 #leftTime {
-	width: auto;
-	height: 100%;
+	float: right;
 }
 #range {
 	width: 100%;
