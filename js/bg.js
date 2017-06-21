@@ -15,10 +15,11 @@ function animation(i) {
 	a.style.opacity = 1;
 	a.style.width = '150px';
 	a.style.height = '150px';
-	var vrtcl = rand(window.pageYOffset, ((window.pageYOffset + (window.screen.height-300)) - 200  - 50))
+	var vrtcl = rand(window.pageYOffset, ((window.pageYOffset + (window.screen.height-200)) - 75 - 50))
 	a.style.top = vrtcl + 'px';
 	var side = (vrtcl % 2 == 0)? 'left': 'right';
-	var hrznt = rand(50, (document.body.clientWidth/2 - 250 - 200 - 50))
+	console.log(side)
+	var hrznt = rand(50, (document.body.clientWidth/2 - document.getElementsByClassName('content')[0].clientWidth/2 - 75))
 	a.style[side] = hrznt + 'px';
 	setTimeout(function() {
 		a.style.opacity = 0;

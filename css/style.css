@@ -23,32 +23,30 @@ a {
 
 /*header*/
 header {
-	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
+	padding: 15px;
+	min-width: 300px;
 	height: 200px;
 	background: linear-gradient(to top, rgba(203, 248, 254, 0.2), rgba(3, 203, 214, 0.2));
 	overflow: hidden;
 	box-shadow: 2px 2px 5px 0 #3399A3;
 	margin-bottom: 15px;
+	/*background-image: url('http://st.depositphotos.com/3018991/3783/i/950/depositphotos_37833545-stock-photo-frozen-drops-of-water-on.jpg');
+	background-repeat: repeat-x;*/
+	align-items: center;
+	/*opacity: 0.2;*/
 }
 /*h-logo*/
-.h-bgimage {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background-image: url('http://st.depositphotos.com/3018991/3783/i/950/depositphotos_37833545-stock-photo-frozen-drops-of-water-on.jpg');
-	background-repeat: repeat-x;
-	opacity: 0.2;
-}
-.h-logo {
-	position: absolute;
-	left: 30%;
-	bottom: 0%;
+.h-logo {	
+	float: left;	
 	width: 10%;
 	max-width: 150px;
 	max-height: 180px;
-	min-width: 130px;
-	min-height: 100px;
+	min-width: 150px;
+	min-height: 180px;
 	text-align: center;
 	transition: 0.4s;
 	color: rgba(256, 256, 256, 0);
@@ -57,25 +55,23 @@ header {
 	font-family: Arial sans-serif;
 	font-size: 70%;
 }
+
 .h-logo:hover {		
 	background-color: rgba(256, 256, 256, 0.2);
 	box-shadow: 0 0 10px 0 #CBF8FD,
 		10px 8px 2px 0 #3399A3;
 	color: white;
 	text-shadow: 0 0 10px #3399A3;
-	left: 29.5%;
-	bottom: 10px;
 }
 .h-logo img {
 	width: 100%;
 	height: 100%;
 }
 /*h-navigation*/
+header nav {
+	margin-left: 10%;
+}
 .h-nav {
-	position: absolute;
-	right: 30%;
-	top: 75px;
-	bottom: 75px;
 	list-style-type: none;
 }
 .h-nav li {
@@ -106,42 +102,33 @@ header {
 /*content*/
 .content {
 	position: relative;
-	width: 40%;
-	min-width: 700px;
+	display: flex;
+	justify-content: center;
+	width: 60%;
+	min-width: 300px;
 	min-height: 2000px;
+	padding: 15px;
 	background-color: rgba(255,255,255,0.8);
 	margin: auto;
 	box-shadow: 2px 2px 5px 0 #3399A3;
+	z-index: 1;
 }
 /*aside panel*/
 /*small side banner style*/
 .smallMyProj {
-	position: absolute;
-	top: 20px;
-	right: 20px;
+	float: right;
 	width: 30%;
 	height: 500px;
 	background-color: rgba(203, 248, 253, 0.3);
 	box-shadow: 4px 3px 2px 0 #3399A3;
 	transition: 0.5s;
 	text-indent: 15px;
-	animation-name: rotate;
-	animation-duration: 2s;
-	animation-direction: normal;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
 }
 .smallMyProj:hover {
-	/*top: 18px;
-	right: 22px;
 	box-shadow: 10px 8px 2px 0 #3399A3;
 	background-color: rgba(203, 248, 253, 0.5);
-	transform-origin: 10% 10%;*/
+	/*transform-origin: 10% 10%;*/
 	
-}
-@keyframes rotate{
-	from {transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
-	to {transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);}
 }
 .smallMyProj ul {	
 	width: 90%;
@@ -162,7 +149,7 @@ header {
 .bigMyProj {
 	position: absolute;
 	z-index: 1;
-	top: -150px;
+	top: -200px;
 	left: -100px;
 	right: -100px;
 	width: auto;
@@ -194,7 +181,7 @@ header {
 	font-style: italic;
 	background-position: 0 0;
 	transition-direction: easy-in-out;
-	transition-duration: 1s;
+	transition-duration: 5s;
 }
 .content aside li:hover {
 	box-shadow: 0 0 5px 0 #3399A3;
@@ -204,7 +191,7 @@ header {
 	width: 110%;
 	background-position: 0 0;
 	transition-direction: easy-in-out;
-	transition-duration: 1s;
+	transition-duration: 5s;
 
 }
 /*timer*/
@@ -247,18 +234,15 @@ header {
 }
 /*main content*/
 .content article {
-	position: absolute;
-	top: 20px;
-	left: 20px;
+	float: right;
 	width: 60%;
 	height: 500px;
-	transition: 0.2s;
 	color: #0C727C;	
 	text-indent: 15px;
 	font-weight: 200;
 	font-family: Arial sans-serif;
 	font-size: 150%;
-	cursor: default;
+	margin-right: 15px;
 }
 
 

@@ -1,10 +1,12 @@
 #wall {
 	position: relative;
-	/*z-index: -1;*/
+	top: 0;
+	left: 0;
+	z-index: 0;
 }
-#wall img {
-	opacity: 0;
+#wall img {	
 	position: absolute;
+	opacity: 0;
 	width: 1px;
 	height: 1px;
 	transition-duration: 5s;
