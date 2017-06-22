@@ -2,7 +2,7 @@ var start = new Date(2017, 1);
 var end = new Date(2018, 0);
 var checkInt, div, res, contentInt, lost;
 
-//process
+//functional
 function checkRange() {
 	div = time.getElementsByTagName('div')[0];
 	clearInterval(contentInt);
@@ -48,7 +48,6 @@ function refresh() {
 function timerIndicator() {	
 	var percent = lost/(end - start);
 	percentToBar(fieldInd, percent)
-	
 }
 function bars() {
 	var barArr = document.getElementsByClassName('bar');
@@ -70,14 +69,45 @@ function bars() {
 		percentToBar(barArr[i], arrOfGlobRes[i])
 	}
 }
-
-
-//' + perc*100 + '%
-//' + ((perc*100)+3) + '%
 function percentToBar(elem, perc) {
 	elem.style.background = 'linear-gradient(to right, rgba( 0, ' + Math.floor(305-(255*(1-perc))) + ', ' + Math.floor(315-(255*(1-perc))) + ', 0.4), white 95%)';
 	perc = (perc < 0.01)? 0.01: perc;
 	perc = (perc > 0.91)? 0.91: perc;
 	elem.style.backgroundPosition = elem.clientWidth*perc + 'px 0px';
+}
+
+//side panel
+function myProjSize(event) {
+	var barArr = document.getElementsByClassName('bar');
+	if (event.target.classList.contains('smallMyProj')) {
+		event.target.classList.toggle("smallMyProj");
+		event.target.classList.toggle("bigMyProj");
+		for (var i = 1; i < barArr.length; i++) {
+			barArr[i].onmouseup = show;
+		}
+		function show(event) {
+			event.cancelBubble=true;
+			event.target.nextElementSibling.classList.toggle('hidden');
+		}
+		for (var i = 0; i < document.getElementsByTagName('div').length; i++) {
+			document.getElementsByTagName('div')[i].style.transitionProperty = null;
+		}
+		maters.className = 'butt';
+		scrollToTop();
 	
+	} else if (event.target.classList.contains('bigMyProj')) {
+		maters.className = 'hidden';
+		for (var i = 1; i < barArr.length; i++) {
+			barArr[i].onmouseup = null;
+			barArr[i].nextElementSibling.className = 'hidden';
+		}
+		for (var i = 0; i < document.getElementsByTagName('div').length; i++) {
+			document.getElementsByTagName('div')[i].style.transitionProperty = 'width';
+		}
+		event.target.classList.toggle("bigMyProj");
+		event.target.classList.toggle("smallMyProj");
+		scrollToTop();
+		
+	}
+	return false;
 }

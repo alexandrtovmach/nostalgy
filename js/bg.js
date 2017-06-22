@@ -6,8 +6,8 @@ function initBgImg() {
 		i++;
 	}, 2000)
 }
-function rand(min, max) {
-	if (max > document.body.scrollHeight-600) {max = 1800};
+function randPos(min, max) {
+	if (max > document.body.scrollHeight-600) {max = (document.documentElement)? document.documentElement.offsetHeight-400: doocument.body.offsetHeight-400};
 	return (min + Math.floor(Math.random()*(max + 1 - min)))
 }
 function animation(i) {
@@ -15,11 +15,10 @@ function animation(i) {
 	a.style.opacity = 1;
 	a.style.width = '150px';
 	a.style.height = '150px';
-	var vrtcl = rand(window.pageYOffset, ((window.pageYOffset + (window.screen.height-200)) - 75 - 50))
+	var vrtcl = randPos(window.pageYOffset, ((window.pageYOffset + (window.screen.height-200)) - 75 - 50))
 	a.style.top = vrtcl + 'px';
 	var side = (vrtcl % 2 == 0)? 'left': 'right';
-	console.log(side)
-	var hrznt = rand(50, (document.body.clientWidth/2 - document.getElementsByClassName('content')[0].clientWidth/2 - 75))
+	var hrznt = randPos(50, (document.body.clientWidth/2 - document.getElementsByClassName('content')[0].clientWidth/2 - 75))
 	a.style[side] = hrznt + 'px';
 	setTimeout(function() {
 		a.style.opacity = 0;

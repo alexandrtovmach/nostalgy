@@ -8,11 +8,12 @@
 		<![endif]-->
 		<link rel="stylesheet" href="css\style.css">
 		<link rel="stylesheet" href="css\bg.css">
-		<script src="js\timer.js"></script>
+		<script src="js\barpanel.js"></script>
 		<script src="js\bg.js"></script>
 		<script src="js\general.js"></script>
+		<script src="js\scroll.js"></script>
 	</head>
-	<body onload="init()">
+	<body onload="init(); initBgImg(); arrows(); bars(); ">
 		<header>
 			<a href="index.html">
 				<figure class="h-logo">
@@ -22,10 +23,10 @@
 			</a>
 			<nav>
 				<ul class="h-nav">
-					<a href="index.html" title="Home page"><li>HOME</li></a>
-					<a href="portfolio.html" title="Examples of my work"><li>PORTFOLIO</li></a>
-					<a href="about.html" title="My biography and achievements"><li>ABOUT ME</li></a>
-					<a href="contacts.html" title="Contact info"><li>CONTACTS</li></a>
+					<a href="index.html" title="Home page"><li class="butt">HOME</li></a>
+					<a href="pages\portfolio.html" title="Examples of my work"><li class="butt">PORTFOLIO</li></a>
+					<a href="pages\about.html" title="My biography and achievements"><li class="butt">ABOUT ME</li></a>
+					<a href="pages\contacts.html" title="Contact info"><li class="butt">CONTACTS</li></a>
 				</ul>
 			</nav>
 		</header>
@@ -51,9 +52,7 @@
 		</div>
 		<div class="content">
 			<article>
-				<p>This site is for personal and public use. He is a motivator for the creator and at the same time shows the level of skill for the employer.</p>
-				<p>This site is for personal and public use. He is a motivator for the creator and at the same time shows the level of skill for the employer.</p>
-				<p>This site is for personal and public use. He is a motivator for the creator and at the same time shows the level of skill for the employer.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</article>
 			<aside id="myproj" class="smallMyProj">
 				<h2>My projectA</h2>
@@ -79,6 +78,7 @@
 							<li>Игра "Интуиция"</li>
 							<li>Жаргонный переводчик сайтов</li>
 							<li>Редактор-адаптер в кроссбраузерную верстку</li>
+							
 						</ul>
 					</li>
 					<li><div class="bar">Developing</div>
@@ -107,10 +107,10 @@
 						<input id="range" type="range">
 					</div>
 				</div>
-				
+				<a href="pages\strategy.html"><div id="maters" class="hidden">Learning materials</div></a>
 			</aside>
 		</div>
-		
+		<div id="arrow" class="hidden" onclick="scrollToTop()">&#9650;</div>
 		<footer></footer>
 	</body>
 </html>
