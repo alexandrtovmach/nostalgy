@@ -11,8 +11,9 @@
 		<link rel="stylesheet" href="..\css\about.css">
 		<script src="..\js\general.js"></script>
 		<script src="..\js\scroll.js"></script>
+		<script src="..\js\strategy.js"></script>
 	</head>
-	<body onload="arrows();">
+	<body onload="initWayFunc(); arrows();">
 		<header>
 			<a href="index.html">
 				<figure class="h-logo">
@@ -30,21 +31,19 @@
 			</nav>
 		</header>
 		<div id="desk">
-			<div id="front">
-				<a href="https://developer.mozilla.org/ru/docs/Web/HTML"><img src="..\img\bg\html.png"></a>
+			<div id="c_front" class="category">FrontEnd</div>
+			<div id="c_back" class="category">BackEnd</div>
+				<!--<a href="https://developer.mozilla.org/ru/docs/Web/HTML"><img src="..\img\bg\html.png"></a>
 				<a href="https://developer.mozilla.org/ru/docs/Web/CSS"><img src="..\img\bg\css.png"></a>
 				<a href="https://developer.mozilla.org/ru/docs/Web/JavaScript"><img src="..\img\bg\js.png"></a>
 				<a href="https://angularjs.org/"><img src="..\img\bg\angularjs.png"></a>
 				<a href="http://pointjs.ru/"><img src="..\img\bg\pointjs.png"></a>
-			</div>
-			<div id="back">
+				<a href="http://www.photoshop.com/"><img src="..\img\bg\photoshop.png"></a>
+				
 				<a href="https://nodejs.org/"><img src="..\img\bg\nodejs.png"></a>
 				<a href="https://www.mysql.com/"><img src="..\img\bg\mysql.png"></a>
 				<a href="https://www.mongodb.com/"><img src="..\img\bg\mongodb.png"></a>
-			</div>
-			<div id="design">				
-				<a href="http://www.photoshop.com/"><img src="..\img\bg\photoshop.png"></a>
-			</div>
+				
 				<a href="https://github.com/"><img src="..\img\bg\github.png"></a>
 				<a href="http://academy.binary-studio.com/"><img src="..\img\bg\binarystudioacademy.png"></a>
 				<a href="https://htmlacademy.ru/"><img src="..\img\bg\htmlacademy.png"></a>
@@ -54,6 +53,7 @@
 				<a href="https://www.w3schools.com/"><img src="..\img\bg\w3c.png"></a>
 				<a href="https://www.codecademy.com/"><img src="..\img\bg\codeacademy.png"></a>
 				<a href="https://www.freecodecamp.com/"><img src="..\img\bg\freecodecamp.png"></a>
+		--->
 		</div>
 		<div id="arrow" class="hidden" onclick="scrollToTop()">&#9650;</div>
 		<footer></footer>
