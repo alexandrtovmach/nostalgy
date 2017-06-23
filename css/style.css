@@ -11,10 +11,14 @@ ul, input {
 }
 body {
 	background-color: #CBF8FD;
-	height: 1600px;
+	/*height: 1600px;*/
 }
 a {
 	text-decoration: none;
+}
+h1, p {
+	text-align: center;
+	color: #3399A3;
 }
 .hidden {
 	display: none;
@@ -265,8 +269,8 @@ header nav {
 
 /*footer*/
 footer {
-	position: absolute;
-	top: 1400px;
+	position: relative;
+	top: 15px;
 	width: 100%;
 	height: 200px;
 	padding: 2%;
