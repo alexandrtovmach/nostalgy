@@ -19,6 +19,7 @@ function scrollToTop() {
 		window.scrollBy(0, a.toFixed(1));
 		if (window.pageYOffset == 0) {clearInterval(inter)};
 	}, 1000/60);
+	console.log('goid')
 }
 function contCreate() {
 	var arrAllP = document.getElementsByTagName('article')[0].getElementsByTagName('h3');

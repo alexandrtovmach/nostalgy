@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8">
 		<title>projectA v2.0</title>
@@ -13,7 +13,7 @@
 		<script src="..\js\scroll.js"></script>
 		<script src="..\js\strategy.js"></script>
 	</head>
-	<body onload="initWayFunc(); arrows(); polifylls();">
+	<body onload="initWayFunc(); arrows();">
 		<header>
 			<a href="index.html">
 				<figure class="h-logo">
@@ -30,77 +30,29 @@
 				</ul>
 			</nav>
 		</header>
-		<h1>Made their way into programming</h1>
-		<p>Choose one of the suggested options and at the end you will see the recommended resources and materials</p>
 		<div id="desk">
-			<div id="c_front" class="category">FrontEnd
-				<div id="c_f_coding" class="hidden">Coding
-					<div id="c_f_c_html" class="hidden">HTML
-						<div id="c_f_c_html_docs" class="hidden">Documentation
-							<a icon class="hidden" href="https://developer.mozilla.org/ru/docs/Web/HTML"><img src="..\img\bg\html.png"></a>
-						</div>
-						<div id="c_f_c_html_complex" class="hidden">Tutorials||Courses||Schools
-							<a icon class="hidden" href="https://htmlacademy.ru/"><img src="..\img\bg\htmlacademy.png"></a>
-							<a icon class="hidden" href="https://www.codecademy.com/"><img src="..\img\bg\codeacademy.png"></a>
-							<a icon class="hidden" href="https://www.freecodecamp.com/"><img src="..\img\bg\freecodecamp.png"></a>
-							<a icon class="hidden" href="http://htmlbook.ru/"><img src="..\img\bg\htmlbook.png"></a>
-						</div>
-						<div id="c_f_c_html_single" class="hidden">Interest materials</div>
-					</div>
-					<div id="c_f_c_css" class="hidden">CSS</div>
-					<div id="c_f_c_js" class="hidden">JS
-						<div id="c_f_c_js_clean" class="hidden">JavaScript
-							<div id="c_f_c_js_c_docs" class="hidden">Documentation
-								<a icon class="hidden" href="https://developer.mozilla.org/ru/docs/Web/JavaScript"><img src="..\img\bg\js.png"></a>
-							</div>
-							<div id="c_f_c_js_c_complex" class="hidden">Tutorials||Courses||Schools
-								<a icon class="hidden" href="https://learn.javascript.ru/"><img src="..\img\bg\learnjs.png"></a>
-								<a icon class="hidden" href="https://www.codecademy.com/"><img src="..\img\bg\codeacademy.png"></a>
-								<a icon class="hidden" href="https://www.freecodecamp.com/"><img src="..\img\bg\freecodecamp.png"></a>
-								<a icon class="hidden" href="http://academy.binary-studio.com/"><img src="..\img\bg\binarystudioacademy.png"></a>
-							</div>
-							<div id="c_f_c_js_c_single" class="hidden">Interest materials</div>
-						</div>
-						<div id="c_f_c_js_frameworks" class="hidden">Frameworks
-							<div id="c_f_c_js_f_docs" class="hidden">Official Pages||Documentation
-								<a icon class="hidden" href="https://angularjs.org/"><img src="..\img\bg\angularjs.png"></a>
-								<a icon class="hidden" href="http://pointjs.ru/"><img src="..\img\bg\pointjs.png"></a>
-							</div>
-							<div id="c_f_c_js_f_complex" class="hidden">Tutorials||Courses||Schools
-							</div>
-							<div id="c_f_c_js_f_single" class="hidden">Interest materials</div>
-						</div>
-					</div>
-				</div>
-				<div id="c_f_design" class="hidden">Design
-					<a icon class="hidden" href="http://www.photoshop.com/"><img src="..\img\bg\photoshop.png"></a>
-				</div>
-			</div>
-			<div id="c_back" class="category">BackEnd
-				<a icon class="hidden" href="https://nodejs.org/"><img src="..\img\bg\nodejs.png"></a>
-				<a icon class="hidden" href="https://www.mysql.com/"><img src="..\img\bg\mysql.png"></a>
-				<a icon class="hidden" href="https://www.mongodb.com/"><img src="..\img\bg\mongodb.png"></a>
-			</div>
-				<!--<a icon href="https://developer.mozilla.org/ru/docs/Web/HTML"><img src="..\img\bg\html.png"></a>
-				<a icon class="hidden" href="https://developer.mozilla.org/ru/docs/Web/CSS"><img src="..\img\bg\css.png"></a>
-				<a icon class="hidden" href="https://developer.mozilla.org/ru/docs/Web/JavaScript"><img src="..\img\bg\js.png"></a>
-				<a icon class="hidden" href="https://angularjs.org/"><img src="..\img\bg\angularjs.png"></a>
-				<a icon class="hidden" href="http://pointjs.ru/"><img src="..\img\bg\pointjs.png"></a>
-				<a icon class="hidden" href="http://www.photoshop.com/"><img src="..\img\bg\photoshop.png"></a>
+			<div id="c_front" class="category">FrontEnd</div>
+			<div id="c_back" class="category">BackEnd</div>
+				<!--<a href="https://developer.mozilla.org/ru/docs/Web/HTML"><img src="..\img\bg\html.png"></a>
+				<a href="https://developer.mozilla.org/ru/docs/Web/CSS"><img src="..\img\bg\css.png"></a>
+				<a href="https://developer.mozilla.org/ru/docs/Web/JavaScript"><img src="..\img\bg\js.png"></a>
+				<a href="https://angularjs.org/"><img src="..\img\bg\angularjs.png"></a>
+				<a href="http://pointjs.ru/"><img src="..\img\bg\pointjs.png"></a>
+				<a href="http://www.photoshop.com/"><img src="..\img\bg\photoshop.png"></a>
 				
-				<a icon class="hidden" href="https://nodejs.org/"><img src="..\img\bg\nodejs.png"></a>
-				<a icon class="hidden" href="https://www.mysql.com/"><img src="..\img\bg\mysql.png"></a>
-				<a icon class="hidden" href="https://www.mongodb.com/"><img src="..\img\bg\mongodb.png"></a>
+				<a href="https://nodejs.org/"><img src="..\img\bg\nodejs.png"></a>
+				<a href="https://www.mysql.com/"><img src="..\img\bg\mysql.png"></a>
+				<a href="https://www.mongodb.com/"><img src="..\img\bg\mongodb.png"></a>
 				
-				<a icon class="hidden" href="https://github.com/"><img src="..\img\bg\github.png"></a>
-				<a icon class="hidden" href="http://academy.binary-studio.com/"><img src="..\img\bg\binarystudioacademy.png"></a>
-				<a icon class="hidden" href="https://htmlacademy.ru/"><img src="..\img\bg\htmlacademy.png"></a>
-				<a icon class="hidden" href="http://htmlbook.ru/"><img src="..\img\bg\htmlbook.png"></a>
-				<a icon class="hidden" href="https://learn.javascript.ru/"><img src="..\img\bg\learnjs.png"></a>
-				<a icon class="hidden" href="http://training.qatestlab.com/"><img src="..\img\bg\qatestlab.png"></a>
-				<a icon class="hidden" href="https://www.w3schools.com/"><img src="..\img\bg\w3c.png"></a>
-				<a icon class="hidden" href="https://www.codecademy.com/"><img src="..\img\bg\codeacademy.png"></a>
-				<a icon class="hidden" href="https://www.freecodecamp.com/"><img src="..\img\bg\freecodecamp.png"></a>
+				<a href="https://github.com/"><img src="..\img\bg\github.png"></a>
+				<a href="http://academy.binary-studio.com/"><img src="..\img\bg\binarystudioacademy.png"></a>
+				<a href="https://htmlacademy.ru/"><img src="..\img\bg\htmlacademy.png"></a>
+				<a href="http://htmlbook.ru/"><img src="..\img\bg\htmlbook.png"></a>
+				<a href="https://learn.javascript.ru/"><img src="..\img\bg\learnjs.png"></a>
+				<a href="http://training.qatestlab.com/"><img src="..\img\bg\qatestlab.png"></a>
+				<a href="https://www.w3schools.com/"><img src="..\img\bg\w3c.png"></a>
+				<a href="https://www.codecademy.com/"><img src="..\img\bg\codeacademy.png"></a>
+				<a href="https://www.freecodecamp.com/"><img src="..\img\bg\freecodecamp.png"></a>
 		--->
 		</div>
 		<div id="arrow" class="hidden" onclick="scrollToTop()">&#9650;</div>
