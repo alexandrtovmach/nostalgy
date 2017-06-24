@@ -2,7 +2,7 @@ function scrollToElem(targ) {
 	var elem = document.getElementById(targ.target.getAttribute('charpenter'));
 	var b = (elem.getBoundingClientRect().top < 0)? -1: 1;
 	var inter = setInterval(function () {
-		var a = 10;
+		var a = 20;
 		var dist = elem.getBoundingClientRect().top*b
 		a = (dist <= 100)? ((dist <= 50)? a/10: a/1): a/0.5;
 		window.scrollBy(0, a.toFixed(1)*b);
@@ -14,7 +14,7 @@ function arrows() {
 }
 function scrollToTop() {
 	var inter = setInterval(function () {
-		var a = -10;
+		var a = -20;
 		a = (window.pageYOffset <= 100)? ((window.pageYOffset <= 50)? a/10: a/1): a/0.5;
 		window.scrollBy(0, a.toFixed(1));
 		if (window.pageYOffset == 0) {clearInterval(inter)};

@@ -9,12 +9,12 @@
 	width: 100%;
 }
 .category {
-	flex: 1 1 500px;
+	flex: 1 1 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 30%;
-	height: 500px;
+	width: 20%;
+	height: 100px;
 	margin: 20px;
 	color: rgba(255, 255, 255, 1);
 	font-size: 120%;
@@ -41,12 +41,17 @@
 	flex: 0 1 100px;
 	color: rgba(255, 255, 255, 0.7);
 	margin: 20px;
-	height: 100px;
+	height: 150px;
+	word-break: normal;
+	font-size: 10px;
+	text-align: center;
 	transition: 0.5s;
+	cursor: help;
 	z-index: 2;
 }
 .icons:hover {
-	box-shadow: 0 0 20px 0 white;
+	box-shadow: 0 0 20px 0 white;	
+	background-color: rgba(255, 255, 255, 0.3);
 }
 .cover {
 	flex: auto;

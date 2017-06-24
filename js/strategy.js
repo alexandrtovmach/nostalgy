@@ -1,32 +1,56 @@
 var namesBg = {};
 var infoPhase = false;
+
 function initWayFunc() {
 	document.addEventListener('click', function() {if (!infoPhase) {return}; infos.remove(); infoPhase = false;})
 	desk.addEventListener('click', function(event) {categoryClick(event)})
 	var arrIcon = document.getElementsByTagName('a')
 	for (var i = 0; i < arrIcon.length; i++) {
 		if (!arrIcon[i].hasAttribute('icon')) {continue}
+		//adding text info of link to all icon
+		var infoSpan = document.createElement('span');
+		infoSpan.innerHTML = arrIcon[i].getAttribute('icon').split(';')[0].toUpperCase() + ' of ' + arrIcon[i].getAttribute('icon').split(';')[1].toUpperCase() + ' from ' + arrIcon[i].href.split('/')[2].split('.')[arrIcon[i].href.split('/')[2].split('.').length - 2].toUpperCase() + '.' + arrIcon[i].href.split('/')[2].split('.')[arrIcon[i].href.split('/')[2].split('.').length - 1].toUpperCase();
+		arrIcon[i].appendChild(infoSpan);
+		
+		
+		//adding eventer to all icon
 		arrIcon[i].addEventListener('contextmenu', function (event) {
-			if (infoPhase) {event.preventDefault(); return}
-			infoPhase = true;
 			event.preventDefault();
+			if (infoPhase) {document.getElementById('infos').remove(); infoPhase = false;}
+			infoPhase = true;
 			var infos = document.createElement('div');
 			infos.style.position = 'absolute'
 			infos.style.zIndex = 50;
 			infos.style.width = '100px';
 			infos.style.height = '60px';
+			infos.style.display = 'flex';
+			infos.style.justifyContent = 'center';
+			infos.style.alignItems = 'center';
+			infos.style.cursor = 'pointer';		
 			infos.innerHTML = 'More info';
-			infos.id = 'infos'
+			infos.id = 'infos';
+			infos.setAttribute('about', event.target);
 			infos.style.textAlign = 'center';
 			infos.style.backgroundColor = 'white';
-			infos.style.top = event.clientY + 'px'
-			infos.style.left = event.clientX + 'px'
-			document.body.appendChild(infos)
+			infos.style.top = event.pageY + 'px';
+			infos.style.left = event.pageX + 'px';
+			
+			infos.addEventListener('click', function(event) {showInfo(event)})
+			document.body.appendChild(infos);
 		})
 		
 	}
 	
 }
+//func of click "More Info" 
+//
+//доработать!!!
+//сделать показ детальной информации по аттрибуту 'about'
+
+function showInfo(event) {
+	alert(event.target.getAttribute('about'))
+}
+
 //func of click
 function categoryClick(event) {
 	if (event.target == document.getElementById('desk')) {return}
@@ -65,7 +89,7 @@ function categoryClick(event) {
 				return
 			} else {
 				for (var i = 0; i < check.children.length; i++) {
-					if (check.children[i].tagName == 'IMG') {continue}
+					if ((check.children[i].tagName == 'IMG')||(check.children[i].tagName == 'SPAN')) {continue}
 					check.children[i].className = "hidden";
 					hideChild(check.children[i])
 				}
