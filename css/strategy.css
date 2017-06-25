@@ -9,7 +9,7 @@
 	width: 100%;
 }
 .category {
-	flex: 1 1 auto;
+	flex: 1 1 300px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -17,7 +17,7 @@
 	height: 100px;
 	margin: 20px;
 	color: rgba(255, 255, 255, 1);
-	font-size: 120%;
+	font-size: 110%;
 	font-weight: 500;	
 	box-shadow: 0 0 5px 0 black;
 	font-family: Arial sans-serif;
@@ -32,7 +32,7 @@
 .category:hover {
 	box-shadow: 0 0 20px 0 black;
 	color: rgba(255, 255, 255, 1.5);
-	font-size: 130%;
+	font-size: 120%;
 	text-shadow: 0 0 30px black;
 	opacity: 0.95;
 }

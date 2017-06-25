@@ -2,7 +2,12 @@ var namesBg = {};
 var infoPhase = false;
 
 function initWayFunc() {
-	document.addEventListener('click', function() {if (!infoPhase) {return}; infos.remove(); infoPhase = false;})
+	document.addEventListener('click', function(event) {
+		if ((!infoPhase)||(event.target == document.getElementById('infos'))) {return}; 
+		infos.remove(); 
+		infoPhase = false; 
+		(document.getElementById('aboutTarget'))? (document.getElementById('aboutTarget').id = null): ''
+	})
 	desk.addEventListener('click', function(event) {categoryClick(event)})
 	var arrIcon = document.getElementsByTagName('a')
 	for (var i = 0; i < arrIcon.length; i++) {
@@ -16,25 +21,30 @@ function initWayFunc() {
 		//adding eventer to all icon
 		arrIcon[i].addEventListener('contextmenu', function (event) {
 			event.preventDefault();
-			if (infoPhase) {document.getElementById('infos').remove(); infoPhase = false;}
+			if (infoPhase) {
+				document.getElementById('infos').remove();
+				infoPhase = false;
+				(document.getElementById('aboutTarget'))? (document.getElementById('aboutTarget').id = null): ''
+			}
 			infoPhase = true;
 			var infos = document.createElement('div');
 			infos.style.position = 'absolute'
 			infos.style.zIndex = 50;
 			infos.style.width = '100px';
 			infos.style.height = '60px';
+			infos.style.transition = '1s';
 			infos.style.display = 'flex';
 			infos.style.justifyContent = 'center';
 			infos.style.alignItems = 'center';
 			infos.style.cursor = 'pointer';		
 			infos.innerHTML = 'More info';
 			infos.id = 'infos';
-			infos.setAttribute('about', event.target);
+			(event.target.href)? (event.target.id = "aboutTarget"): (event.target.parentElement.id = "aboutTarget");
+			//infos.setAttribute('about', parentEl);
 			infos.style.textAlign = 'center';
 			infos.style.backgroundColor = 'white';
 			infos.style.top = event.pageY + 'px';
-			infos.style.left = event.pageX + 'px';
-			
+			infos.style.left = event.pageX + 'px';			
 			infos.addEventListener('click', function(event) {showInfo(event)})
 			document.body.appendChild(infos);
 		})
@@ -47,8 +57,13 @@ function initWayFunc() {
 //доработать!!!
 //сделать показ детальной информации по аттрибуту 'about'
 
-function showInfo(event) {
-	alert(event.target.getAttribute('about'))
+function showInfo(event) {	
+	event.target.style.width = 'auto';
+	event.target.style.right = '5%';
+	event.target.style.left = '5%';
+	event.target.style.height = '200px';
+	event.target.innerHTML = myInfo[document.getElementById('aboutTarget')]
+	document.getElementById('aboutTarget').id = null
 }
 
 //func of click

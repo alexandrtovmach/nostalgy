@@ -37,7 +37,7 @@ h1, p {
 	opacity: 0.5;
 	transition: 0.5s;
 	cursor: pointer;
-	z-index: 10;
+	z-index: 100;
 }
 #arrow:hover {
 	opacity: 1;

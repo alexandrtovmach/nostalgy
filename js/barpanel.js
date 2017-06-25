@@ -30,7 +30,7 @@ function numberTimer() {
 	}
 }
 function startTimer(event) {
-	event.cancelBubble=true
+	event.cancelBubble = true
 	clearInterval(checkInt)
 	fieldInd.removeAttribute('hidden');
 	refresh()

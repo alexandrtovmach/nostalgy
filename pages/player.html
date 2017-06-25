@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>projectA v2.0</title>
+		<!--[if lt IE 9]> 
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+		<![endif]-->
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/player.css">
+		<script src="../js/general.js"></script>
+		<script src="../js/scroll.js"></script>
+		<script src="../js/player.js"></script>
+		<script src="../js/myInfo.json"></script>
+	</head>
+	<body onload="">
+		<header>
+			<a href="../index.html">
+				<figure class="h-logo">
+					<img src="../img/logo.png">
+					<figcaption>WE CREATE YOUR DREAMWORLD</figcaption>
+				</figure>
+			</a>
+			<nav>
+				<ul class="h-nav">
+					<a href="../index.html" title="Home page"><li class="butt">HOME</li></a>
+					<a href="portfolio.html" title="Examples of my work"><li class="butt">PORTFOLIO</li></a>
+					<a href="about.html" title="My biography and achievements"><li class="butt">ABOUT ME</li></a>
+					<a href="contacts.html" title="Contact info"><li class="butt">CONTACTS</li></a>
+				</ul>
+			</nav>
+		</header>
+		<div id="player" class="row">
+			<div id="divImg"><img id="img" class="hidden" src="../img/music/load.png" alt="Logo Not Found"></div>
+			<div class="col">
+				<div id="containName"><div id="artist">Artist - Song</div></div>
+				<div class="row">
+					<div id="previous" onclick="previousSong()"></div>
+					<div id="play" onclick="playSong()"></div>
+					<div id="pause" onclick="pauseSong()"></div>
+					<div id="next" onclick="nextSong()"></div>
+				</div>
+			</div>
+		</div>
+		<div id="arrow" class="hidden" onclick="scrollToTop()">&#9650;</div>
+		<footer></footer>
+	</body>
+</html>
