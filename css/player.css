@@ -1,0 +1,84 @@
+@keyframes load{
+	from {transform: rotate(0deg)}
+	to {transform: rotate(180deg)}
+}
+.row {	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	
+}
+.col {	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+}
+#player {
+	width: 90%;
+	height: 100px;
+	background-color: white;
+	margin: auto;	
+}
+#player div {
+	float: left;
+	cursor: pointer;
+	margin: 0 5px;
+}
+#img {
+	width: 50px;
+	height: 50px;
+	animation-name: load;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes nameind {
+	from {}
+	to {margin-left: -80px}
+}
+#artist {
+	word-wrap: no wrap;
+	width: 500px;
+	text-indent: 20px;
+	animation-name: nameind;
+	animation-delay: 3s;
+	animation-duration: 20s;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+#containName {
+	width: 200px;
+	overflow: hidden;
+}
+#divImg {
+	width: 50px;
+	height: 50px;
+}
+#play {
+	background-image: url('../img/music/play.png');
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+}
+#pause {
+	background-image: url('../img/music/stop.png');
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+}
+#previous {
+	background-image: url('../img/music/previous.png');
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+}
+#next {
+	background-image: url('../img/music/next.png');
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+}
