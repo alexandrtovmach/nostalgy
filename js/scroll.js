@@ -1,14 +1,3 @@
-function scrollToElem(targ) {
-	var elem = document.getElementById(targ.target.getAttribute('charpenter'));
-	var b = (elem.getBoundingClientRect().top < 0)? -1: 1;
-	var inter = setInterval(function () {
-		var a = 20;
-		var dist = elem.getBoundingClientRect().top*b
-		a = (dist <= 100)? ((dist <= 50)? a/10: a/1): a/0.5;
-		window.scrollBy(0, a.toFixed(1)*b);
-		if ((elem.getBoundingClientRect().top*b <= 0) || (dist == elem.getBoundingClientRect().top*b)) {clearInterval(inter)};
-	}, 1000/60);
-}
 function arrows() {
 	document.addEventListener('scroll', function () {if(window.pageYOffset > 50) {arrow.className = '';}else {arrow.className = 'hidden';}})
 }
@@ -36,4 +25,15 @@ function contCreate() {
 		li.innerHTML = names[i];		
 		charp.appendChild(li);
 	}
+}
+function scrollToElem(targ) {
+	var elem = document.getElementById(targ.target.getAttribute('charpenter'));
+	var b = (elem.getBoundingClientRect().top < 0)? -1: 1;
+	var inter = setInterval(function () {
+		var a = 20;
+		var dist = elem.getBoundingClientRect().top*b
+		a = (dist <= 100)? ((dist <= 50)? a/10: a/1): a/0.5;
+		window.scrollBy(0, a.toFixed(1)*b);
+		if ((elem.getBoundingClientRect().top*b <= 0) || (dist == elem.getBoundingClientRect().top*b)) {clearInterval(inter)};
+	}, 1000/60);
 }
